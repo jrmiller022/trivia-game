@@ -1,0 +1,10 @@
+body {
+    background-image: url(/assets/images/Full_House_1987_TV_series_logo.png);
+}
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: unset;
+    color: blue;
+    font-size: 75px;
+}
