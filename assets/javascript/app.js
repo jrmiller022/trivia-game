@@ -34,17 +34,15 @@ var questions = [{
     choices: ["Musician", "Cook", "comic", "TV show host" ],
     answer: "comic"
 }]
-
+// Displays questions.
 for(var i = 0; i < questions.length; i++) {
-    console.log(questions[i].question);
-    $("#question").append(questions[i].question);
+    $("#questions").append(questions[i].question + "<br>");
 
+// Displays my Choices to pick from.
     var choice = questions[i].choices;
-
-for(var j = 0; j < choice.length; j++) {
-    console.log(choice[j]);
-    $("#choices").append(choice[j].choices);
-    }
+    for(var j = 0; j < choice.length; j++) {
+        $(".choices").append(choice[j] + "<br>");
+        }
 }
 
 //Timer function
