@@ -15,23 +15,31 @@
 		<div class="jumbotron">
 			<div id="game">
 				<!--Set Game timer-->
-				<h1>Full House Trivia Game!!!</h1>
-				<p class="lead" id="time-left">Time Left: <span id="timer"></span></p>
-				<p class="lead" id="questions"></p><br>
-				<a class="choices"></a>
-				<p id="answer"></p>
-			</div><!--Scoring for game-->
-			<div id="score">
-				<div class="row">
-					<div class="text-center" id="choices"></div><button class="btn btn-info btn-lg" id="start">Start</button>
+				<h1>Full House Trivia Game!!!</h1><!--Scoring for game-->
+				<div id="score">
+					<div class="row">
+						<div class="text-center" id="choices"></div><button class="btn btn-info btn-lg" id="start">Start</button>
+					</div>
+					<p class="lead" id="time-left">Time Left: <span id="timer"></span></p>
+					<div id="quiz"></div><!-- <p class="lead" id="questions"></p><br> -->
+					<!-- <a class="choices"></a> -->
+					<p id="answer"></p>
 				</div>
 				<div id="options"></div>
 				<div id="results"></div>
 			</div>
+			<div id="timesUp">
+				<div class="wrongBox">
+					<h2 class="up">Times Up!</h2>
+					<hr>
+					<p>Here's youre score:</p>
+					<p id="correctTimesUp">Correct Answers:</p>
+					<p id="wrongTimesUp">Wrong Answers:</p>
+				</div>
+			</div>
 		</div>
-    </div>
-    
-    <script src="assets/javascript/app.js" type="text/javascript">
-    </script>
+	</div>
+	<script src="assets/javascript/app.js" type="text/javascript">
+	</script>
 </body>
 </html>
