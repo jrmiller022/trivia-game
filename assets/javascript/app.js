@@ -20,13 +20,13 @@ var questions = [{
 	choices: ["Commet", "Pup", "Lucky", "Driver"],
 	answer: "Commet",
 }, {
-	question: "Who did Jessy Marry?",
+	question: "Who did Jessy marry?",
 	choices: ["Kimmy", "Sara", "Becky", "Whitney"],
 	answer: "Becky",
 }, {
 	question: "What did Joey do for a profession?",
-	choices: ["Musician", "Cook", "comic", "TV show host"],
-	answer: "comic"
+	choices: ["Musician", "Cook", "Comic", "TV show host"],
+	answer: "Comic"
 }]
 
 // Displays questions.
@@ -34,7 +34,8 @@ question = $("<div>");
 $("#quiz").append(question);
 for (var i = 0; i < questions.length; i++) {
 	$(question).append("<p>" + questions[i].question + "</p>");
-	// Displays my Choices to pick from.
+
+// Displays my Choices to pick from.
 	var choice = questions[i].choices;
 	for (var j = 0; j < choice.length; j++) {
 		var button = $("<button>");
@@ -45,12 +46,12 @@ for (var i = 0; i < questions.length; i++) {
 }
 
 $(".choices").on("click", "button", function() {
-	userPick = $(".choices").text(choices);
+	userPick = $(".choices").append(choices);
 	questions[i].val;
 	if (userPick !== choices[j].val) {
 		incorrect++;
 	} else(userPick === choices[j].val);
-	correct++;
+		correct++;
 })
 
 //Timer function
@@ -74,24 +75,6 @@ function gameStart() {
 	IntervalId = setInterval(decrement, 1000);
 	timer = 3;
     stop();
-    
-// loop through correctArray & radioName to match html elements & answers
-	for (var i = 0; i < 10; i++) {
-		if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
-			correct++;
-			console.log("this is correct! number:" + i)
-		} else {
-			incorrect++;
-			console.log("this is wrong! number:" + i)
-		};
-	}
-	$('#correctTimesUp').append(correctAnswers);
-	// display wrongAnswers
-	$('#wrongTimesUp').append(wrongAnswers);
-	$('#timesUp').fadeIn(1000).show();
-	// alert("Times Up!");
-	clearInterval(timer);
-	return;
 }
 
 //Stop timer function
@@ -108,3 +91,51 @@ function reset() {
 }
 
 
+// //function for capturing the answer from the data-attribute
+// function correctAnswer() {
+//   $(correctAnswer).append(correct);
+//   console.log(correct);
+// }
+
+// // Function for displaying answer data
+// function renderButtons() {
+
+//   // (this is necessary otherwise we will have repeat buttons)
+//   $("buttons").empty();
+
+//   // Looping through the array of movies
+//   for (var i = 0; i < question.length; i++) {
+
+// 	// This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+// 	var a = $("<button>");
+// 	// Adding a class
+// 	a.addClass("answer");
+// 	// Added a data-attribute
+// 	a.attr("data-name", questions[i]);
+// 	// Provided the initial button text
+// 	a.text(choice[i]);
+//   }
+// }
+
+// // This function handles events where one button is clicked
+// $("button").on("click", function(event) {
+//   event.preventDefault();
+
+//   // This line grabs the input from the textbox
+//   var pick = $("button").val().trim();
+
+//   // The answer from the textbox is then added to our array
+//   choice.push(choices);
+
+//   // Calling renderButtons which handles the processing of our choices array
+//   renderButtons();
+// });
+
+// // Function for displaying the answer info
+// // adding a click event listener to all elements with the class "choices"
+// // adding the event listener to the document itself.
+// // $(".movies").on("click") will only add listeners to elements that are on the page at that time
+// $(document).on("click", ".choice", correctAnswer);
+
+// // Calling the renderButtons function to display the intial buttons
+// renderButtons();
