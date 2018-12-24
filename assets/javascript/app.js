@@ -12,6 +12,7 @@ var IntervalId;
 var clockRunning = false;
 var answer;
 var choices;
+
 var questions = [{
 	question: "What is the name of the Father?",
 	choices: ["Mark", "Jessie", "Joey", "Danny"],
@@ -51,11 +52,11 @@ for (var i = 0; i < questions.length; i++) {
 }
 
 $(".answerButton").on("click", function() {
-	userPick = $(".choices").append(choices);
-	questions[i].val;
-	if (userPick !== choices[j].val) {
+	userPick = $(this).val().trim();
+	questions[i].val();
+	if (userPick !== choices[j].val()) {
 		incorrect++;
-	} else(userPick === choices[j].val);
+	} else(userPick === choices[j].val());
 		correct++;
 })
 
